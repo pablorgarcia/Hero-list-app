@@ -1,0 +1,15 @@
+
+<h2>Hero data</h2>
+<form [formGroup]="heroFormGroup">
+
+  <div ngClass="hero-list-form">
+    <label>Hero name</label>
+    <input formControlName="hero">
+  </div>
+  <div ngClass="hero-list-form">
+    <label>Real name</label>
+    <input formControlName="name">
+  </div>
+  <button app-button [data]="{ text: 'Submit'}" (click)="submit()"></button>
+
+</form>

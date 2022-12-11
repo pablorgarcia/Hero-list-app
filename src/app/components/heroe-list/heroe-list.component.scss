@@ -1,0 +1,10 @@
+.hero-list {
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  grid-template-rows: 2em;
+  margin: 1em 0;
+}
+
+.hero-list button {
+  margin: 0 1em;
+}

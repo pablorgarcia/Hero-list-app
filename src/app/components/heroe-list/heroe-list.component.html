@@ -1,0 +1,23 @@
+
+
+  <h2>Create a new hero</h2>
+  <button (click)="goToCreate()">Create</button>
+
+  <h2>Search a hero</h2>
+  <div class="form-group">
+    <input type="text" [(ngModel)]="searchText" placeholder="Enter text" autofocus>
+  </div>
+
+  <h2>List of heroes</h2>
+  <div *ngFor="let heroe of heroes | appFilter: searchText; let i = index" ngClass="hero-list">
+
+    <p>{{ heroe.hero }}</p>
+
+    <button (click)="goToDetail(heroe.id)">Detail</button>
+
+    <button (click)="goToEdit(heroe.id)">Edit</button>
+
+    <button (click)="deleteHero(i)">Delete</button>
+
+  </div>
+

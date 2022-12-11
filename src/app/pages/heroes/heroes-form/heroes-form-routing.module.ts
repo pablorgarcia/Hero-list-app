@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HeroesFormComponent } from './heroes-form.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/layout/layout.module').then(m => m.LayoutModule)
-  },
+    component: HeroesFormComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class HeroesFormRoutingModule { }
